@@ -33,15 +33,7 @@ app.use('/movies', movies);
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;
-  
-  
-  	var data = {
-		title : "Superman" 
-	};
-	
-	res.render("simple", data)
-  
-  //res.render()
+  res.render()
   next(err);
 });
 
